@@ -1,0 +1,25 @@
+bool bSearch(int* arr, int len, int small, int large)
+{
+	if (len < 1 || small > large)
+	{
+		return false;
+	}
+	int left = 0, right = len - 1;
+	while (left <= right)
+	{
+		int mid = (left + right)/2;
+		if (arr[mid] < small)
+		{
+			left = mid + 1;
+		}
+		else if (arr[mid] > large)
+		{
+			right = mid - 1;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	return false;
+}
