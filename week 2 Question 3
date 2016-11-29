@@ -1,0 +1,9 @@
+int solve(int n)
+{
+	int ret = 0;
+	while ((ret+1)*(ret+1)<=n)
+	{
+		ret++;
+	}
+	return ret;
+}
