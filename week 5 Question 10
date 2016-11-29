@@ -1,0 +1,31 @@
+int find(int p[],int n, int s[])
+{
+	int temp[MAX]={0};
+	int length=0,t=0;
+	for(int i=0;i<n-1;i++)
+	{
+		temp[0]=p[i];
+		t++;
+		for(int j=i+1;j<n;j++)
+		{
+			if(p[j]>p[j-1])
+			{
+				temp[t]=p[j];
+				t++;
+			}else
+			{
+				break;
+			}
+		}
+		if(t>length)
+		{
+			for(int k=0;k<t;k++)
+			{
+				s[k]=temp[k];
+			}
+			length=t;
+		}
+		t=0;
+	}
+	return length;
+}
