@@ -1,0 +1,16 @@
+bool prime(int n, int k)
+{
+	if (k == n)
+	{
+		return true;
+	}
+	if (n % k == 0)
+	{
+		return false;
+	}
+	return prime(n, k+1);
+}
+bool isPrime(int n)
+{
+	return prime(n, 2);
+}
