@@ -1,0 +1,19 @@
+int numberOf5(int n)
+{
+	int ret = 0;
+	while(n % 5 == 0)
+	{
+		n /= 5;
+		ret ++;
+	}
+	return ret;
+}
+int numberOf0(int n)
+{
+	int ret = 0;
+	for (int i = 5; i <= n; ++i)
+	{
+				ret += numberOf5(i);
+	}
+	return ret;
+}
