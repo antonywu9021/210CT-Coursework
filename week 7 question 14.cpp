@@ -99,6 +99,7 @@ int main()
 	graph.addEdge(0, 3);
 	graph.addEdge(1, 4);
 	graph.dfs();
+	graph.bfd();
 	return 0;
 }
 
